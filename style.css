@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+html{
+    overflow-x: hidden;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+}
+
+
+body{
+    background-color:  hsl(185, 41%, 84%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo{
+    margin-top:3%;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    width: 65vw;
+    height: 75vh;
+    border-radius: 30px;
+    padding: 30px;
+    margin-top: 2%;
+}
+
+@media (max-width: 1080px){
+
+    .logo{
+        margin-top: 15%;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100%;
+        margin-top: 10%;
+    }
+}
+
+/* CONFIGURAÇÕES DO INPUT CONTAINER */
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 28px;
+    width: 30vw;
+    padding: 20px;
+}
+
+.bill legend, .percentage legend, .people-number legend{
+    font-size: 0.7rem;
+    color: hsl(186, 14%, 43%);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+#bill-value{
+    background-image: url('./images/icon-dollar.svg');
+    background-repeat: no-repeat;
+    background-size:auto;
+    background-position-y: center;
+    background-position-x: 15px;
+    background-color: hsl(189, 41%, 97%);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color:  hsl(183, 100%, 15%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    width: 98%;
+    padding: 3px;
+    border:none;
+    border-radius: 5px;
+    appearance: none;
+}
+
+#bill-value::-webkit-outer-spin-button,
+#bill-value::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.percentage{
+    width: 100%;
+}
+
+
+.percentage-numbers{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.percentage-number{
+    color: white;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 5px;
+    padding:5px;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    width: 100px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.percentage-numbers input{
+    background-color: hsl(189, 41%, 97%);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color:  hsl(183, 100%, 15%);
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: none;
+    width: 100px;
+    margin:5px;
+}
+
+.percentage-numbers input::placeholder{
+    color: hsl(186, 14%, 43%);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.percentage-actived{
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+    border-radius: 5px;
+    padding:5px;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    width: 100px;
+    margin: 5px;
+}
+
+
+.people-number input{
+    background-image: url('./images/icon-person.svg');
+    background-repeat: no-repeat;
+    background-size:auto;
+    background-position-y: center;
+    background-position-x: 15px;
+    background-color: hsl(189, 41%, 97%);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color:  hsl(183, 100%, 15%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    width: 99%;
+    padding: 3px;
+    border:none;
+    border-radius: 5px;
+    appearance: none;
+}
+
+.people-number input::placeholder{
+    color: hsl(186, 14%, 43%);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+#people-number-imput::-webkit-outer-spin-button,
+#people-number-imput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.error{
+    font-size: 0.6rem;
+    margin-top: 5px;
+    color: red;
+    margin-left: 80px;
+}
+
+.red-border{
+    border: red solid 1px;
+}
+
+/* CONFIGURAÇÕES PARA MEDIA 375PX ATÉ 1080 */
+
+@media (max-width:1080px){
+
+    .input-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        align-self: center;
+        width: 95%;
+        margin-right: 0px;
+        padding: 0;
+    }
+
+    .bill{
+        width: 100%;
+    }
+
+    .bill, .percentage, .people-number{
+        margin-bottom: 35px;
+    }
+
+    .bill legend, .percentage legend, .people-number legend{
+        margin-bottom: 10px;
+        margin-left: 6px;
+        font-size: 0.6rem;
+    }
+
+
+    #bill-value{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .percentage-numbers{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        width: 100%;
+    }
+
+    .percentage-number{
+        color: white;
+        background-color: hsl(183, 100%, 15%);
+        border-radius: 5px;
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: 700;
+        width: 90%;
+        cursor: pointer;
+        margin: 5px;
+        margin-bottom: 7px;
+        
+    }
+
+    .percentage-numbers input{
+        background-color: hsl(189, 41%, 97%);
+        font-size: 0.8rem;
+        font-weight: 700;
+        color:  hsl(183, 100%, 15%);
+        border-radius: 5px;
+        padding: 5px;
+        text-align: center;
+        font-size: 0.8rem;
+        font-weight: 700;
+        border: none;
+        width: 90%;
+        margin:5px;
+    }
+    .percentage-actived{
+        color: hsl(183, 100%, 15%);
+        background-color: hsl(172, 67%, 45%);
+        border-radius: 5px;
+        padding:5px;
+        text-align: center;
+        font-size: 0.8rem;
+        font-weight: 700;
+        width: 90%;
+        margin: 5px;
+    }
+
+    .people-number{
+        width: 100%;
+    }
+
+    .people-number input{
+        
+        width: 100%;
+        padding: 10px;
+    }
+
+    .error{
+        font-size: 0.5rem;
+        color: red;
+        margin-left: 30px;
+    }
+}
+
+/* CONFIGURAÇAÕES DO OUTPUT CONTAINER */
+
+.output-container{
+    background-color: hsl(183, 100%, 15%);
+    width: 30vw;
+    padding: 25px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tip-person{
+    margin-bottom: 30px;
+}
+
+.tip-person, .tip-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tip-person-text h4, .tip-total-text h4{
+    font-size: 0.7rem;
+    color: white;
+    font-weight: 400;
+    padding: 2px;
+}
+
+.tip-person-text p, .tip-total-text p{
+    font-size: 0.6rem;
+    color: hsl(184, 14%, 56%);
+}
+
+.tip-person-result, .tip-person-result p , .tip-total-result, .tip-total-result p{
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: hsl(172, 67%, 45%);
+}
+
+.reset{
+    width: 90%;
+    align-self: center;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color:hsl(183, 100%, 15%);
+    background-color:hsl(172, 67%, 45%);
+    padding: 8px;
+    cursor: pointer;
+}
+
+@media (max-width:1080px){
+    .output-container{
+        width: 100%;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .tip-person{
+        margin-bottom: 15px;
+    }
+
+    .tip-total{
+        margin-bottom: 25px;
+    }
+
+    .tip-person-text h4, .tip-total-text h4{
+        font-size: 0.6rem;
+        color: white;
+        font-weight: 400;
+        padding: 2px;
+    }
+    
+    .tip-person-text p, .tip-total-text p{
+        font-size: 0.6rem;
+        color: hsl(184, 14%, 56%)
+    }
+    .tip-person-result, .tip-person-result p , .tip-total-result, .tip-total-result p{
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: hsl(172, 67%, 45%);
+
+    }
+    .reset{
+        width: 100%;
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="logo">
+        <img src="./images/logo.svg" alt="logo">
+    </div>
+
+    <main class="container">
+
+        <div class="input-container">
+            <div class="bill">
+                <legend>Bill</legend>
+                <input onchange="calculateFromBill()" id="bill-value" type="number" placeholder= "0">
+            </div>
+
+            <div class="percentage">
+                <legend>Select Tip %</legend>
+                <div class="percentage-numbers">
+                    <div onclick="handleClick(event)" class="percentage-number" id="5%">5%</div>
+                    <div onclick="handleClick(event)" class="percentage-number" id="10%">10%</div>
+                    <div onclick="handleClick(event)" class="percentage-number" id="15%">15%</div>
+                    <div onclick="handleClick(event)" class="percentage-number" id="25%">25%</div>
+                    <div onclick="handleClick(event)" class="percentage-number" id="50%">50%</div>
+                    <input onclick="clearButton()" onchange="customCalculate()" id="custom" placeholder="Custom"></input>
+                </div>
+
+            </div>
+
+            <div class="people-number">
+                <legend>Number of People <span id='number-people-error'></span></legend>
+                <input onchange="calculateFromBill()" id="people-number-imput"placeholder= "0" type="number">
+            </div>
+        </div>
+
+        <div class="output-container">
+            <div class="tips-output">
+                <div class="tip-person">
+                    <div class="tip-person-text">
+                        <h4>Tip Amount</h4>
+                        <p>/ person</p>
+                    </div>
+                    <div class="tip-person-result">0.00</div>
+                </div>
+
+                <div class="tip-total">
+                    <div class="tip-total-text">
+                        <h4>Total</h4>
+                        <p>/ person</p>
+                    </div>
+                    <div class="tip-total-result">0.00</div>
+                </div>
+            </div>
+            <button onclick="reset()" class="reset">
+                RESET
+            </button>
+
+        </div>
+
+
+
+    </main>
+
+
+
+    <script src="./script.js"></script>
+    <script src="./interface.js"></script>
+</body>
+
+</html>
