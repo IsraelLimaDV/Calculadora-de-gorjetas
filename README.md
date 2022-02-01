@@ -13,6 +13,15 @@ em um cenário norte americano do que no brasil onde não temos o costume de cal
 
 Todo o projeto foi feito de forma responsiva.
 
+## Funcionalidades básicas
+
+ - Inserir o valor total da conta
+ - Inserir a porcentageme de gorjeta desejada, com botões de valores pré-definidos e também uma opção "Custom" para valores personalizados
+ - Inserir a quantidade de pessoas que dividirão a conta
+ - Retorna o valor da gorjeta que cada pessoa pagará
+ - Retorna o valor total da conta por pessoa, já somando a gorjeta
+ - Botão de reset para reiniciar os valores da aplicação
+
 ## Preview do projeto versão Desktop
 
 <div align="center">
