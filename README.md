@@ -4,7 +4,7 @@
 
 Link para conferir o projeto: https://israellimadv.github.io/Calculadora-de-gorjetas/
 
-As técnologias usadas foram: 
+As tecnologias usadas foram: 
 
 - JavaScript
 - CSS 
