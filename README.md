@@ -2,6 +2,8 @@
 
 #### Projeto feito com base no desafio do site Front End Mentor. 
 
+Link para conferir o projeto: https://israellimadv.github.io/Calculadora-de-gorjetas/
+
 As técnologias usadas foram: 
 
 - JavaScript
